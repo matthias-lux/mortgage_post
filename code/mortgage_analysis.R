@@ -4,11 +4,11 @@
 # comparing mortgage payments on ARMs and fixed-rate mortgages
 
 # processing data
-source(data_processing.R)
+source('data_processing.R')
 
 
 # inspect data
-source(data_summary.R)
+source('data_summary.R')
 
 # model interest rate:
   # model mean of rates via ARMA: 
@@ -16,7 +16,7 @@ source(data_summary.R)
   # model residuals (which are mean-zero) as GARCH/EGARCH model (see CLM p. 486 for a really general model)
   #   - \eta_{t} = \sigma_{t-1} * \eps_t
 
-source(model_estimation.R)
+source('model_estimation.R')
 
   #   - choose model with best fit, test mortgage payment predictions with second-best model
   #     - evaluate fit through
